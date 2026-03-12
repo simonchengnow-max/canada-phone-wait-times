@@ -405,11 +405,11 @@
       <div class="lbl">Longest typical wait (min)<br>CRA &mdash; Auditor General Oct 2025</div>
     </div>
     <div class="stat-card">
-      <div class="val green">5</div>
-      <div class="lbl">Shortest typical wait (min)<br>Hotels</div>
+      <div class="val green">11</div>
+      <div class="lbl">Shortest typical wait (min)<br>Credit Cards</div>
     </div>
     <div class="stat-card">
-      <div class="val orange">22</div>
+      <div class="val orange">24</div>
       <div class="lbl">Average across all categories (min)</div>
     </div>
     <div class="stat-card">
@@ -619,15 +619,6 @@ const data = [
     agent_location_probability: { local_canada: 0.50, offshore: 0.50 },
     notes: "Fraud and dispute calls are prioritized in routing queues. Volumes rise during holiday shopping. Routing split roughly evenly between domestic and offshore."
   },
-  {
-    id: "hotels",
-    label: "Hotels",
-    avg_wait_minutes_typical: 5,
-    avg_wait_minutes_min: 1,
-    avg_wait_minutes_max: 18,
-    agent_location_probability: { local_canada: 0.33, offshore: 0.67 },
-    notes: "Shortest waits in the model. Reservation lines are staffed to protect conversion. Central lines commonly routed offshore; direct front-desk calls are local."
-  }
 ];
 
 // Sort by typical descending for bar chart

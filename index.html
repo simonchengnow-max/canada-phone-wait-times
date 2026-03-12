@@ -401,15 +401,15 @@
   <p class="section-title">At a Glance</p>
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="val red">46</div>
-      <div class="lbl">Longest typical wait (min)<br>Government services</div>
+      <div class="val red">31</div>
+      <div class="lbl">Longest typical wait (min)<br>CRA &mdash; Auditor General Oct 2025</div>
     </div>
     <div class="stat-card">
       <div class="val green">5</div>
       <div class="lbl">Shortest typical wait (min)<br>Hotels</div>
     </div>
     <div class="stat-card">
-      <div class="val orange">21</div>
+      <div class="val orange">22</div>
       <div class="lbl">Average across all categories (min)</div>
     </div>
     <div class="stat-card">
@@ -417,8 +417,8 @@
       <div class="lbl">Avg. chance your agent<br>is based in Canada</div>
     </div>
     <div class="stat-card">
-      <div class="val accent">90</div>
-      <div class="lbl">Max recorded wait ceiling (min)<br>Government &amp; Airlines</div>
+      <div class="val accent">450</div>
+      <div class="lbl">Max recorded wait ceiling (min)<br>Banks (BMO) &mdash; Reddit reports</div>
     </div>
   </div>
 
@@ -550,11 +550,11 @@ const data = [
   {
     id: "government_services",
     label: "Government services",
-    avg_wait_minutes_typical: 46,
-    avg_wait_minutes_min: 22,
-    avg_wait_minutes_max: 90,
+    avg_wait_minutes_typical: 31,
+    avg_wait_minutes_min: 15,
+    avg_wait_minutes_max: 120,
     agent_location_probability: { local_canada: 0.95, offshore: 0.05 },
-    notes: "Public-sector lines rank highest for hold times. High demand, limited staffing, and mandatory domestic agents due to data-sovereignty requirements all contribute. Spikes during benefit renewal cycles and tax season."
+    notes: "Auditor General Oct 2025: avg 31 min to reach a CRA agent; 50 min total per call. Only 18% of calls answered within 15 min (65% target). In June 2025 under 5% answered on time. 8.6M calls deflected in 2024-25 — up from 1.4M prior year. CRA agents gave accurate answers only 17% of the time on individual tax questions."
   },
   {
     id: "airlines",
@@ -568,11 +568,11 @@ const data = [
   {
     id: "telecommunications",
     label: "Telecommunications",
-    avg_wait_minutes_typical: 23,
+    avg_wait_minutes_typical: 28,
     avg_wait_minutes_min: 8,
-    avg_wait_minutes_max: 55,
+    avg_wait_minutes_max: 158,
     agent_location_probability: { local_canada: 0.42, offshore: 0.58 },
-    notes: "High inbound volumes for billing disputes, outages, and plan changes. Peaks Monday mornings and after service disruptions. General inquiries often offshored."
+    notes: "CBC Go Public Nov 2025: Rogers customer spent 2hr 38min on one call and 7+ hours total trying to cancel service. CCTS 2024-25: 23,647 telecom complaints, up 17% YoY. Rogers led all providers. Prof. Eugene Chan (Toronto Met U): lack of competition removes incentive to improve."
   },
   {
     id: "insurance",
@@ -604,11 +604,11 @@ const data = [
   {
     id: "banks",
     label: "Banks",
-    avg_wait_minutes_typical: 13,
-    avg_wait_minutes_min: 4,
-    avg_wait_minutes_max: 32,
+    avg_wait_minutes_typical: 18,
+    avg_wait_minutes_min: 5,
+    avg_wait_minutes_max: 450,
     agent_location_probability: { local_canada: 0.63, offshore: 0.37 },
-    notes: "Moderate waits with peaks on weekday mornings and month-end. Mortgage and complex inquiries handled domestically; routine calls may be offshored."
+    notes: "Reddit r/PersonalFinanceCanada: BMO users consistently report 3-hour waits with some reporting up to 7.5 hours (450 min). Multiple users confirmed these figures persist year-over-year. Mortgage and complex inquiries handled domestically; routine calls may be offshored."
   },
   {
     id: "credit_card_providers",
@@ -729,7 +729,7 @@ new Chart(donutCtx, {
 });
 
 // ── RANGE ROWS ──
-const MAX = 90;
+const MAX = 450;
 const rangeContainer = document.getElementById('rangeRows');
 sorted.forEach((d, i) => {
   const leftPct  = (d.avg_wait_minutes_min     / MAX * 100).toFixed(1);

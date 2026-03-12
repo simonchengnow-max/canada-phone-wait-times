@@ -405,11 +405,11 @@
       <div class="lbl">Longest typical wait (min)<br>CRA &mdash; Auditor General Oct 2025</div>
     </div>
     <div class="stat-card">
-      <div class="val green">11</div>
+      <div class="val green">35</div>
       <div class="lbl">Shortest typical wait (min)<br>Credit Cards</div>
     </div>
     <div class="stat-card">
-      <div class="val orange">24</div>
+      <div class="val orange">27</div>
       <div class="lbl">Average across all categories (min)</div>
     </div>
     <div class="stat-card">
@@ -613,11 +613,11 @@ const data = [
   {
     id: "credit_card_providers",
     label: "Credit cards",
-    avg_wait_minutes_typical: 11,
-    avg_wait_minutes_min: 3,
-    avg_wait_minutes_max: 28,
+    avg_wait_minutes_typical: 35,
+    avg_wait_minutes_min: 5,
+    avg_wait_minutes_max: 160,
     agent_location_probability: { local_canada: 0.50, offshore: 0.50 },
-    notes: "Fraud and dispute calls are prioritized in routing queues. Volumes rise during holiday shopping. Routing split roughly evenly between domestic and offshore."
+    notes: "Excludes Amex. Big 6 Canadian bank card issuers (TD, RBC, CIBC, Scotiabank, BMO, Desjardins). Scotiabank and CIBC users report 60-160 min waits on Reddit/RedFlagDeals; TD and RBC average 5-15 min; BMO 15-30 min. Fraud and dispute calls prioritized. Volumes rise during holiday shopping."
   },
 ];
 

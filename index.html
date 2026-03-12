@@ -307,6 +307,66 @@
   }
   .disclaimer strong { color: #aaa; }
 
+  /* ── SOURCES & QUOTES ── */
+  .sources-section { margin-bottom: 40px; }
+  .quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .quote-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+    padding: 18px 18px 14px;
+  }
+  .quote-card blockquote {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .quote-card .quote-meta { font-size: 0.74rem; color: var(--muted); }
+  .quote-card .quote-meta a { color: var(--accent); text-decoration: none; }
+  .quote-card .quote-meta a:hover { text-decoration: underline; }
+  .quote-wait-badge {
+    display: inline-block;
+    background: rgba(230,57,70,0.15);
+    color: var(--red);
+    border: 1px solid rgba(230,57,70,0.3);
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 9px;
+    margin-bottom: 10px;
+  }
+  .sources-list {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+  }
+  .sources-list h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .sources-list ol {
+    padding-left: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 6px 28px;
+  }
+  .sources-list li { font-size: 0.79rem; color: var(--muted); line-height: 1.5; }
+  .sources-list li a { color: #7eb8d4; text-decoration: none; }
+  .sources-list li a:hover { text-decoration: underline; }
+
   /* ── LEGEND ── */
   .legend {
     display: flex;
@@ -416,6 +476,66 @@
       &#128338; Join the Early-Access Waitlist
     </a>
     <div class="cta-sub">Free to join &bull; No commitment &bull; Canada-focused</div>
+  </div>
+
+  <!-- SOURCES & REAL VOICES -->
+  <div class="sources-section">
+    <p class="section-title">Real Voices &mdash; What Canadians Actually Said</p>
+    <div class="quotes-grid">
+
+      <div class="quote-card">
+        <div class="quote-wait-badge">CRA &mdash; 10+ months</div>
+        <blockquote>"It's frustrating, it has created a lot of stress for me. It just keeps hanging over my head."</blockquote>
+        <div class="quote-meta">Bill Bisson, taxpayer waiting 10 months for CRA to resolve a dispute &mdash; <a href="https://www.cbc.ca/news/gopublic/cra-tax-delays-9.7076075" target="_blank" rel="noopener">CBC News</a></div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-wait-badge">Rogers &mdash; ~7 hours total</div>
+        <blockquote>"I spent 2 hours and 38 minutes on one call alone just trying to cancel my business internet. I kept getting 'we are experiencing heavy call volumes' no matter what time I called."</blockquote>
+        <div class="quote-meta">Anil Sedha, Winnipeg business owner &mdash; <a href="https://www.cbc.ca/news/gopublic/go-public-rogers-customer-service-issues-9.6977461" target="_blank" rel="noopener">CBC Go Public, Nov 2025</a></div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-wait-badge">BMO &mdash; 7.5 hours</div>
+        <blockquote>"BMO phone support wait times are always 3 hours... another year later, still like this."</blockquote>
+        <div class="quote-meta">Reddit user, r/PersonalFinanceCanada &mdash; confirmed by multiple users reporting 3&ndash;7.5 hr waits &mdash; <a href="https://www.reddit.com/r/PersonalFinanceCanada/comments/p4f1f2/bmo_phone_support_wait_times_are_always_3_hours/" target="_blank" rel="noopener">Reddit thread</a></div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-wait-badge">IRCC &mdash; calls disconnected</div>
+        <blockquote>"I used multiple phones simultaneously to call back-to-back because individual numbers get 'blacklisted' for the day after being disconnected. Waited 45+ minutes when I finally got through."</blockquote>
+        <div class="quote-meta">Immigration applicant, CanadaVisa forums &mdash; <a href="https://www.canadavisa.com/canada-immigration-discussion-board/threads/how-to-call-ircc-impossible-to-get-in-the-line.764100/" target="_blank" rel="noopener">CanadaVisa.com</a></div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-wait-badge">Telecom industry &mdash; systemic</div>
+        <blockquote>"It reduces the need for these telcos to compete and to provide good customer service because they think, 'Customers need us, so we don't really need to do anything to improve our service.'"</blockquote>
+        <div class="quote-meta">Prof. Eugene Chan, Toronto Metropolitan University &mdash; <a href="https://www.cbc.ca/news/gopublic/go-public-rogers-customer-service-issues-9.6977461" target="_blank" rel="noopener">CBC News, Nov 2025</a></div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-wait-badge">CRA &mdash; 2+ hours</div>
+        <blockquote>"CBC News found waits exceeding 2 hours despite the CRA website estimating only 8&ndash;11 minutes."</blockquote>
+        <div class="quote-meta">CBC News investigation &mdash; <a href="http://ici.radio-canada.ca/rci/en/news/2201202/" target="_blank" rel="noopener">Radio-Canada / CBC</a></div>
+      </div>
+
+    </div>
+
+    <div class="sources-list">
+      <h4>&#128203; Data Sources</h4>
+      <ol>
+        <li><a href="https://www.cbc.ca/news/politics/ag-fall-2025-cra-military-9.6946672" target="_blank" rel="noopener">Auditor General Report on CRA Contact Centres (Oct 2025)</a> &mdash; avg 31-min CRA wait, only 18% answered within standard</li>
+        <li><a href="https://www.canada.ca/en/taxpayers-ombudsperson/programs/reports-publications/annual-reports/annual-report-2023-2024.html" target="_blank" rel="noopener">Taxpayers' Ombudsperson Annual Report 2023-24</a> &mdash; 2,833 complaints, wait times top issue</li>
+        <li><a href="https://www.canada.ca/en/taxpayers-ombudsperson/programs/reports-publications/annual-reports/annual-report-2024-2025.html" target="_blank" rel="noopener">Taxpayers' Ombudsperson Annual Report 2024-25</a> &mdash; contact centres remain #1 complaint</li>
+        <li><a href="https://www.reddit.com/r/PersonalFinanceCanada/comments/1jhaspi/analysis_on_best_times_to_call_cra/" target="_blank" rel="noopener">Reddit: Best times to call CRA (r/PersonalFinanceCanada, Mar 2025)</a> &mdash; 30&ndash;40 min waits at peak hours</li>
+        <li><a href="https://www.cbc.ca/news/gopublic/go-public-rogers-customer-service-issues-9.6977461" target="_blank" rel="noopener">CBC Go Public: Rogers customer service nightmare (Nov 2025)</a> &mdash; 7-hour cancellation ordeal</li>
+        <li><a href="https://mobilesyrup.com/2026/01/14/rogers-led-record-number-canadian-telecom-complaints-2024-25/" target="_blank" rel="noopener">CCTS 2024-25 Telecom Complaints Report (Jan 2026)</a> &mdash; 23,647 complaints, up 17% YoY</li>
+        <li><a href="https://www.reddit.com/r/PersonalFinanceCanada/comments/p4f1f2/bmo_phone_support_wait_times_are_always_3_hours/" target="_blank" rel="noopener">Reddit: BMO 3-hour phone waits (r/PersonalFinanceCanada)</a> &mdash; 7.5-hr max reported</li>
+        <li><a href="https://dfimmigration.ca/2019/11/21/no-plan-to-improve-current-ircc-call-centre-wait-times/" target="_blank" rel="noopener">Auditor General 2019: IRCC Call Centres</a> &mdash; 1M callers hung up on hold, 7M calls deflected</li>
+        <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/transparency/committees/cimm-oct-2-2025/processing-times-service-delivery.html" target="_blank" rel="noopener">IRCC Processing & Service Delivery Report (Oct 2025)</a> &mdash; 40% call answer rate</li>
+        <li><a href="https://www.theglobeandmail.com/politics/article-canada-revenue-agency-federal-auditor-general-report-call-centre-wait/" target="_blank" rel="noopener">Globe and Mail: Auditor-General targets CRA (Oct 2025)</a> &mdash; wait times doubled year-over-year</li>
+      </ol>
+    </div>
   </div>
 
   <!-- DISCLAIMER -->
